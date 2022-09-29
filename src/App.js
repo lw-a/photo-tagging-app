@@ -1,8 +1,12 @@
 import Nav from "./Components/Nav";
-import level1 from './images/level1.png'
+import Game from "./Components/Game";
+import levelOne from './images/levelOne.png'
+import { useState } from "react";
 import './styles/App.css';
 
 function App() {
+
+  const [background, setBackground] = useState(levelOne)
 
   const pokemon = {
     levelOne: {
@@ -23,9 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav pokemon={pokemon.levelOne}/>
+      <Nav pokemon={pokemon.levelOne} />
       <div className='container-fluid'>
-        <img src={level1} alt="game" className="img-fluid w-100"/>
+        <Game background={background} />
       </div>
     </div>
 

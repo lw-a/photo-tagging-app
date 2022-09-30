@@ -1,4 +1,5 @@
 import Nav from "./Components/Nav";
+import Home from "./Components/Home";
 import Game from "./Components/Game";
 import StartModal from "./Components/StartModal";
 import levelOne from './images/levelOne.png'
@@ -6,17 +7,7 @@ import { useState } from "react";
 import './styles/App.css';
 
 function App() {
-  const [showModal, setShowModal] = useState(true);
-
   const [background, setBackground] = useState(levelOne)
-
-  function displayModal() {
-    setShowModal(true);
-  }
-
-  function closeModal() {
-    setShowModal(false);
-  }
 
   const pokemon = {
     levelOne: {
@@ -37,11 +28,11 @@ function App() {
 
   return (
     <div className="App">
-      <Nav pokemon={pokemon.levelOne} />
+      {/* <Nav pokemon={pokemon.levelOne} />
       <div className='container-fluid'>
         <Game background={background} />
       </div>
-      <StartModal />
+      <StartModal /> */}
     </div>
 
   );

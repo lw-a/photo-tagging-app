@@ -1,0 +1,12 @@
+p {
+  margin: 0px;
+}
+
+a {
+  color: #e4000f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}

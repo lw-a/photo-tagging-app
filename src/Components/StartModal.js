@@ -3,28 +3,33 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function StartModal() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          border: "none",
+        }}>
+          <Modal.Title>Pokemon Hunt!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+        <Modal.Body   style={{
+          display: "flex",
+          justifyContent: "center",
+        }}>Try and find all 3 listed pokemon as fast as possible!</Modal.Body>
+        <Modal.Footer   style={{
+          display: "flex",
+          justifyContent: "center",
+          border: "none",
+        }}>
+          <Button variant="secondary" onClick={handleClose} style={{backgroundColor: "#e4000f", border: "none"}}>
+          Let's Go!
           </Button>
         </Modal.Footer>
       </Modal>

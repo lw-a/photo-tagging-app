@@ -41,7 +41,7 @@ function App() {
       <div className='container-fluid'>
         <Game background={background} />
       </div>
-      <StartModal show={showModal} />
+      <StartModal />
     </div>
 
   );

@@ -9,16 +9,31 @@ import levelSix from '../images/levelSix.png'
 function Home() {
   return (
     <div className="container">
-      <div className="row">
-        <Card img={levelOne} name="Viridian Forest"/>
-        <Card img={levelTwo} name="Mt. Moon"/>
-        <Card img={levelThree} name="Cerulean City"/>
+
+      <div className="row mb-3">
+        <div className="col">
+          <Card img={levelOne} name="Viridian Forest"/>
+        </div>
+        <div className="col">
+          <Card img={levelTwo} name="Mt. Moon"/>
+        </div>
+        <div className="col">
+          <Card img={levelThree} name="Cerulean City"/>
+        </div>
       </div>
+
       <div className="row">
-        <Card img={levelFour} name="Celadon City Fair"/>
-        <Card img={levelFive} name="Safari Zone"/>
-        <Card img={levelSix} name="Indigo Plateau"/>
+        <div className="col">
+          <Card img={levelFour} name="Celadon City Fair"/>
+        </div>
+        <div className="col">
+          <Card img={levelFive} name="Safari Zone"/>
+        </div>
+        <div className="col">
+          <Card img={levelSix} name="Indigo Plateau"/>
+        </div>
       </div>
+
     </div>
   )
 }

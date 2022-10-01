@@ -10,30 +10,30 @@ function Home(props) {
         <div className="row mb-3">
           <div className="col">
             <Card levelData={props.levelData["one"]} clicked={() => {props.setLevel("one")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
           <div className="col">
             <Card levelData={props.levelData["two"]} clicked={() => {props.setLevel("two")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
           <div className="col">
             <Card levelData={props.levelData["three"]} clicked={() => {props.setLevel("three")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
         </div>
 
         <div className="row">
           <div className="col">
             <Card levelData={props.levelData["four"]} clicked={() => {props.setLevel("four")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
           <div className="col">
             <Card levelData={props.levelData["five"]} clicked={() => {props.setLevel("five")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
           <div className="col">
             <Card levelData={props.levelData["six"]} clicked={() => {props.setLevel("six")
-            props.setRunning(true)}}/>
+            props.startGame()}}/>
           </div>
         </div>
       </div>

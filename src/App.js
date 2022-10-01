@@ -81,7 +81,7 @@ function App() {
     },
     "five": {
       first: {
-        name: 'Dratini and Pidgey',
+        name: 'Pidgey',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/pidgey.png'
       },
       second: {

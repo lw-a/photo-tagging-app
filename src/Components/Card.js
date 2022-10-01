@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import '../styles/Card.css';
 
 function Card(props) {
   return (
-    <div className="card" style={{width: "100%"}}>
-      <img class="card-img-top" src={props.img} alt="level"></img>
-      <div className="card-body d-flex justify-content-between align-items-center" style={{padding: "6px"}}>
-        <p>{props.name}</p>
-        <a href="#" className="card-link">Play!</a>
+    <Link to="/game" onClick={props.clicked}>
+      <div className="card" style={{width: "100%"}}>
+        <img className="card-img-top" src={props.levelData.img} alt="level"></img>
+        <div className="card-body d-flex justify-content-between align-items-center" style={{padding: "6px"}}>
+          <p className="name">{props.levelData.name}</p>
+          <p className="play">Play!</p>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

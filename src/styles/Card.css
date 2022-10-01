@@ -1,12 +1,16 @@
 p {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 a {
-  color: #e4000f;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-a:hover {
-  color: grey;
+.play {
+  color: #e4000f !important;
+}
+
+.name {
+  text-decoration: none;
+  color: black;
 }

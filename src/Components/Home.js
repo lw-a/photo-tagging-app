@@ -1,36 +1,30 @@
 import Card from "./Card";
-import levelOne from '../images/levelOne.png'
-import levelTwo from '../images/levelTwo.png'
-import levelThree from '../images/levelThree.png'
-import levelFour from '../images/levelFour.png'
-import levelFive from '../images/levelFive.png'
-import levelSix from '../images/levelSix.png'
 
-function Home() {
+function Home(props) {
   return (
     <div className="container">
 
       <div className="row mb-3">
         <div className="col">
-          <Card img={levelOne} name="Viridian Forest"/>
+          <Card levelData={props.levelData["one"]} clicked={() => props.setLevel("one")}/>
         </div>
         <div className="col">
-          <Card img={levelTwo} name="Mt. Moon"/>
+          <Card levelData={props.levelData["two"]} clicked={() => props.setLevel("two")}/>
         </div>
         <div className="col">
-          <Card img={levelThree} name="Cerulean City"/>
+          <Card levelData={props.levelData["three"]} clicked={() => props.setLevel("three")}/>
         </div>
       </div>
 
       <div className="row">
         <div className="col">
-          <Card img={levelFour} name="Celadon City Fair"/>
+          <Card levelData={props.levelData["four"]} clicked={() => props.setLevel("four")}/>
         </div>
         <div className="col">
-          <Card img={levelFive} name="Safari Zone"/>
+          <Card levelData={props.levelData["five"]} clicked={() => props.setLevel("five")}/>
         </div>
         <div className="col">
-          <Card img={levelSix} name="Indigo Plateau"/>
+          <Card levelData={props.levelData["six"]} clicked={() => props.setLevel("six")}/>
         </div>
       </div>
 

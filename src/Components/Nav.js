@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import '../styles/Nav.css';
 import Timer from "./Timer";
 
@@ -16,6 +17,7 @@ function Nav(props) {
           <li className="list-group-item border-0 text-bg-dark">{levelData.third.name} <img src={levelData.third.sprite} alt =''></img></li>
         </ul>
         <Timer time={props.time} setTime={props.setTime} running={props.running}/>
+        <Link to="/"><button type="button" className="btn btn-secondary">Home</button></Link>
       </nav>
     )
   } else {

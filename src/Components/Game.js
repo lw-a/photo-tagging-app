@@ -1,6 +1,16 @@
+import Nav from "./Nav";
+
 function Game(props) {
+
+  const levelData = props.levelData
+
+
   return(
-    <img src={props.levelData.img} alt="game" className="img-fluid w-100"/>
+    <div>
+
+    <Nav levelData={levelData} />
+    <img src={levelData.img} alt="game" className="img-fluid w-100"/>
+    </div>
   )
 }
 

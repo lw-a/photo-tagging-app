@@ -1,4 +1,3 @@
-import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import Game from "./Components/Game";
 import StartModal from "./Components/StartModal";
@@ -13,6 +12,7 @@ import levelSix from './images/levelSix.png'
 import './styles/App.css';
 
 function App() {
+  // const [background, setBackground] = useState(levelOne)
   const [level, setLevel] = useState("one");
 
   const levelData = {

@@ -1,9 +1,12 @@
 import Card from "./Card";
+import Nav from "./Nav";
 
 function Home(props) {
   return (
-    <div className="container">
 
+    <div>
+      <Nav />
+    <div className="container">
       <div className="row mb-3">
         <div className="col">
           <Card levelData={props.levelData["one"]} clicked={() => props.setLevel("one")}/>
@@ -27,7 +30,7 @@ function Home(props) {
           <Card levelData={props.levelData["six"]} clicked={() => props.setLevel("six")}/>
         </div>
       </div>
-
+    </div>
     </div>
   )
 }

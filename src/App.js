@@ -130,7 +130,7 @@ function App() {
     <div className="App">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} setRunning={setRunning} startGame={startGame} /> } />
+        <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
         <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running}/>}/>
       </Routes>
     </BrowserRouter>

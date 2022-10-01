@@ -8,7 +8,7 @@ function Nav(props) {
     const levelData = props.levelData
 
     return(
-      <nav className='navbar bg-dark navbar-dark d-flex justify-content-between px-3'>
+      <nav className='navbar bg-dark navbar-dark d-flex justify-content-between px-3 py-0'>
         <h2 className="navbar-brand">Find the 3 Pokemon!</h2>
         <ul className="list-group list-group-horizontal list-group-flush">
           <li className="list-group-item border-0 text-bg-dark">{levelData.first.name} <img src={levelData.first.sprite} alt =''></img> </li>
@@ -20,8 +20,8 @@ function Nav(props) {
     )
   } else {
     return (
-      <nav className='navbar bg-dark navbar-dark mb-4 d-flex justify-content-center'>
-        <h2 className="navbar-brand">Find that Pokemon!</h2>
+      <nav className='navbar bg-dark navbar-dark my-2 d-flex justify-content-center'>
+        <h2 className="navbar-brand">Find That Pokemon!</h2>
       </nav>
     )
   }

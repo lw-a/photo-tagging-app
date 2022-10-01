@@ -15,7 +15,7 @@ function Timer(props) {
   }, [props]);
 
   return (
-    <div className="text-light lead">
+    <div className="text-light lead" style={{minWidth: "60px", textAlign: "right"}}>
       <span>{("0" + Math.floor((props.time / 60000) % 60)).slice(-2)}:</span>
       <span>{("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}</span>
     </div>

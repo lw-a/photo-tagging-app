@@ -6,7 +6,7 @@ function Home(props) {
 
     <div>
       <Nav />
-      <div className="container">
+      <div className="container mb-3">
         <div className="row mb-3">
           <div className="col">
             <Card levelData={props.levelData["one"]} clicked={() => {props.setLevel("one")

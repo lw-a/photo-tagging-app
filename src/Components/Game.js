@@ -1,4 +1,5 @@
 import Nav from "./Nav";
+import '../styles/Game.css';
 
 function Game(props) {
 

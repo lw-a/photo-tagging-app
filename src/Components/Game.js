@@ -1,6 +1,6 @@
 function Game(props) {
   return(
-    <img src={props.background} alt="game" className="img-fluid w-100"/>
+    <img src={props.img} alt="game" className="img-fluid w-100"/>
   )
 }
 

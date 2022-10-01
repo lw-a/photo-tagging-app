@@ -12,14 +12,13 @@ import levelSix from './images/levelSix.png'
 import './styles/App.css';
 
 function App() {
-  // const [background, setBackground] = useState(levelOne)
   const [level, setLevel] = useState("one");
 
   const levelData = {
     "one": {
       first: {
         name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/weedle.png'
       },
       second: {
         name: 'Slowpoke',
@@ -27,90 +26,90 @@ function App() {
       },
       third: {
         name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/caterpie.png'
       },
       img: levelOne,
       name: "Viridian Forest"
     },
     "two": {
       first: {
-        name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        name: 'Diglett',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/diglett.png'
       },
       second: {
-        name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        name: 'Zubat',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/zubat.png'
       },
       third: {
-        name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        name: 'Jigglypuff',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/jigglypuff.png'
       },
       img: levelTwo,
-      name: "Viridian Forest"
+      name: "Mt. Moon"
     },
     "three": {
       first: {
-        name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        name: 'Tentacool',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tentacool.png'
       },
       second: {
-        name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        name: 'Mr. Mime',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mr-mime.png'
       },
       third: {
-        name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        name: 'Poliwag',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/poliwag.png'
       },
       img: levelThree,
-      name: "Viridian Forest"
+      name: "Cerulean City"
     },
     "four": {
       first: {
-        name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        name: 'Raichu',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/raichu.png'
       },
       second: {
-        name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        name: 'Golduck',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/golduck.png'
       },
       third: {
-        name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        name: 'Porygon',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/porygon.png'
       },
       img: levelFour,
-      name: "Viridian Forest"
+      name: "Celadon City Fair"
     },
     "five": {
       first: {
-        name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        name: 'Dratini and Pidgey',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/pidgey.png'
       },
       second: {
-        name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        name: 'Mewtwo',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mewtwo.png'
       },
       third: {
-        name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        name: 'Tauros',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tauros.png'
       },
       img: levelFive,
-      name: "Viridian Forest"
+      name: "Safari Zone"
     },
     "six": {
       first: {
-        name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/weedle.png'
+        name: 'Ekans',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/ekans.png'
       },
       second: {
-        name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        name: 'Venusaur',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/venusaur.png'
       },
       third: {
-        name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/silver/normal/caterpie.png'
+        name: 'Slowbro',
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowbro.png'
       },
       img: levelSix,
-      name: "Viridian Forest"
+      name: "Indigo Plateau"
     }
   }
 

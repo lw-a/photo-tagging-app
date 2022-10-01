@@ -9,9 +9,9 @@ function Nav(props) {
       <nav className='navbar bg-dark navbar-dark d-flex justify-content-center'>
         <h2 className="navbar-brand">Find the 3 Pokemon!</h2>
         <ul className="list-group list-group-horizontal list-group-flush">
-          <li className="list-group-item border-0">{levelData.first.name} <img src={levelData.first.sprite} alt =''></img> </li>
-          <li className="list-group-item border-0">{levelData.second.name} <img src={levelData.second.sprite} alt =''></img></li>
-          <li className="list-group-item border-0">{levelData.third.name} <img src={levelData.third.sprite} alt =''></img></li>
+          <li className="list-group-item border-0 bg-dark">{levelData.first.name} <img src={levelData.first.sprite} alt =''></img> </li>
+          <li className="list-group-item border-0 bg-dark">{levelData.second.name} <img src={levelData.second.sprite} alt =''></img></li>
+          <li className="list-group-item border-0 bg-dark">{levelData.third.name} <img src={levelData.third.sprite} alt =''></img></li>
         </ul>
       </nav>
     )

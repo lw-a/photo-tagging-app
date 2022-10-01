@@ -13,6 +13,9 @@ import './styles/App.css';
 
 function App() {
   const [level, setLevel] = useState("one");
+  const [time, setTime] = useState(0);
+  const [running, setRunning] = useState(false);
+
 
   const levelData = {
     "one": {
@@ -117,8 +120,8 @@ function App() {
     <div className="App">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home setLevel={setLevel} levelData={levelData}/>} />
-        <Route path="/game" element={<Game levelData={levelData[level]}/>}/>
+        <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} setRunning={setRunning}/> } />
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running}/>}/>
       </Routes>
     </BrowserRouter>
     </div>

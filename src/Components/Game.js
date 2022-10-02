@@ -20,7 +20,12 @@ function Game(props) {
       setX(e.pageX);
     }
 
-    setY(e.pageY);
+    if (gameRef.current.offsetHeight - e.pageY < 150) {
+      setY(e.pageY - 150);
+    } else {
+      setY(e.pageY);
+    }
+
     setShowList(true);
   };
 

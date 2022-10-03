@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import DropDown from "./DropDown";
+import EndModal from "./EndModal";
 import '../styles/Game.css';
 import { useEffect, useState , useRef } from "react";
 
@@ -14,22 +15,22 @@ function Game(props) {
   const gameRef = useRef();
 
   const handleClick = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (gameRef.current.offsetWidth - e.pageX < 150) {
-      setMenuX(e.pageX - 150);
+      setMenuX(e.pageX - 150)
     } else {
-      setMenuX(e.pageX);
+      setMenuX(e.pageX)
     }
-    setX(e.pageX);
+    setX(e.pageX)
 
     if (gameRef.current.offsetHeight - e.pageY < 150) {
-      setMenuY(e.pageY - 150);
+      setMenuY(e.pageY - 150)
     } else {
-      setMenuY(e.pageY);
+      setMenuY(e.pageY)
     }
-    setY(e.pageY);
-    setShowList(!showList);
+    setY(e.pageY)
+    setShowList(!showList)
   };
 
   const size = (x, y, pokemon) => {
@@ -72,7 +73,8 @@ function Game(props) {
     <div ref={gameRef}>
     <Nav levelData={levelData} time={props.time} setTime={props.setTime} running={props.running} />
     <img src={levelData.img} alt="game" className="img-fluid w-100" onClick={handleClick}/>
-    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} progress={props.progress} levelData={levelData} size={size}/>
+    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} progress={props.progress} levelData={levelData} size={size} setShowList={setShowList}/>
+    <EndModal levelData={levelData} time={props.time} show={props.show} />
     </div>
   )
 }

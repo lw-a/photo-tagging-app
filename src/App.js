@@ -14,6 +14,8 @@ function App() {
   const [level, setLevel] = useState("one");
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(true);
+  const [show, setShow] = useState(false);
+  const [score, setScore] = useState(0);
   const [progress, setProgress] = useState({
     first: false,
     second: false,
@@ -23,20 +25,24 @@ function App() {
   function startGame() {
     setTime(0)
     setRunning(true)
+    setShow(false)
+
+    setProgress({
+      first: false,
+      second: false,
+      third: false
+    });
+
   }
 
   function endGame () {
     setRunning(false)
-    const score = time
+    setScore(time)
+    setShow(true)
     console.log(score)
-    // setProgress({
-    //   first: false,
-    //   second: false,
-    //   third: false
-    // });
+
     console.log(`Winner! Completed in ${("0" + Math.floor((score / 60000) % 60)).slice(-2)}:${("0" + Math.floor((score / 1000) % 60)).slice(-2)}`)
   }
-
 
   const levelData = {
     one: {
@@ -160,7 +166,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} /> } />
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show}/> } />
       </Routes>
     </BrowserRouter>
     </div>

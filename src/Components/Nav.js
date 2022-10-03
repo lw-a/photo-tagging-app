@@ -9,7 +9,7 @@ function Nav(props) {
     const levelData = props.levelData
 
     return(
-      <nav className='navbar bg-dark navbar-dark d-flex justify-content-between px-3 py-0'>
+      <nav className='navbar bg-dark navbar-dark d-flex justify-content-between px-3 py-0 fixed-top'>
         <h2 className="navbar-brand">Find the 3 Pokemon!</h2>
         <ul className="list-group list-group-horizontal list-group-flush">
           <li className="list-group-item border-0 text-bg-dark">{levelData.first.name} <img src={levelData.first.sprite} alt =''></img> </li>

@@ -32,14 +32,17 @@ function Game(props) {
 
   const size = (x, y) => {
     let width = gameRef.current.offsetWidth;
-    console.log(width)
     const relativeX = x / width;
     console.log(relativeX)
     let height = gameRef.current.offsetHeight;
-    const relativeY = (y - document.querySelector("nav").clientHeight) / width;
-    console.log(height)
+    const relativeY = (y - document.querySelector("nav").clientHeight) / height;
     console.log(relativeY)
 
+    if (Math.abs(relativeX - levelData.first.location[0]) < 0.02 && Math.abs(relativeY - levelData.first.location[1]) < 0.02) {
+      console.log("weedle")
+    } else {
+      console.log("not weedle")
+    }
   }
 
   return(

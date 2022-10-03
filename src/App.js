@@ -31,15 +31,18 @@ function App() {
     "one": {
       first: {
         name: 'Weedle',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/weedle.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/weedle.png',
+        location: [0.39970717423133234, 0.4541108986615679]
       },
       second: {
         name: 'Slowpoke',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png',
+        location: [0.8850658857979502, 0.6998087954110899]
       },
       third: {
         name: 'Caterpie',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/caterpie.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/caterpie.png',
+        location: [0.41947291361639827, 0.731357552581262]
       },
       img: levelOne,
       name: "Viridian Forest"

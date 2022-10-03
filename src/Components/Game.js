@@ -8,6 +8,7 @@ function Game(props) {
   const levelData = props.levelData
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const [coords, setCoords] = useState([0, 0]);
   const [showList, setShowList] = useState(false);
   const gameRef = useRef();
 
@@ -25,15 +26,19 @@ function Game(props) {
     } else {
       setY(e.pageY);
     }
-
+    setCoords([e.pageX, e.pageY]);
     setShowList(true);
   };
 
   const size = (x, y) => {
     let width = gameRef.current.offsetWidth;
-    let height = gameRef.current.offsetHeight;
     console.log(width)
+    const relativeX = x / width;
+    console.log(relativeX)
+    let height = gameRef.current.offsetHeight;
+    const relativeY = (y - document.querySelector("nav").clientHeight) / width;
     console.log(height)
+    console.log(relativeY)
 
   }
 

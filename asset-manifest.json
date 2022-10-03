@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/photo-tagging-app/static/css/main.59cc98e9.css",
+    "main.js": "/photo-tagging-app/static/js/main.e1448b07.js",
+    "static/media/levelFour.png": "/photo-tagging-app/static/media/levelFour.55bcb7780658439ffe71.png",
+    "static/media/levelTwo.png": "/photo-tagging-app/static/media/levelTwo.493fca715972258aa180.png",
+    "static/media/levelOne.png": "/photo-tagging-app/static/media/levelOne.ce10729718fced989423.png",
+    "static/media/levelThree.png": "/photo-tagging-app/static/media/levelThree.a9b845c7dd8edec9f77c.png",
+    "static/media/levelFive.png": "/photo-tagging-app/static/media/levelFive.ca79cd169f6fd111f9d9.png",
+    "static/media/levelSix.png": "/photo-tagging-app/static/media/levelSix.0fb55bbdf69bb21af3ec.png",
+    "index.html": "/photo-tagging-app/index.html",
+    "main.59cc98e9.css.map": "/photo-tagging-app/static/css/main.59cc98e9.css.map",
+    "main.e1448b07.js.map": "/photo-tagging-app/static/js/main.e1448b07.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59cc98e9.css",
+    "static/js/main.e1448b07.js"
+  ]
+}

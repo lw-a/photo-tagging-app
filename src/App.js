@@ -62,15 +62,18 @@ function App() {
     "two": {
       first: {
         name: 'Diglett',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/diglett.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/diglett.png',
+        location: [0.6522693997071742, 0.06876790830945559]
       },
       second: {
         name: 'Zubat',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/zubat.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/zubat.png',
+        location: [0.7064421669106882, 0.5023877745940784]
       },
       third: {
         name: 'Jigglypuff',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/jigglypuff.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/jigglypuff.png',
+        location: [0.10688140556368961, 0.5491881566380133]
       },
       img: levelTwo,
       name: "Mt. Moon"
@@ -78,15 +81,18 @@ function App() {
     "three": {
       first: {
         name: 'Tentacool',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tentacool.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tentacool.png',
+        location: [0.48316251830161056, 0.1824196597353497]
       },
       second: {
         name: 'Mr. Mime',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mr-mime.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mr-mime.png',
+        location: [0.11127379209370425, 0.5151228733459358]
       },
       third: {
         name: 'Poliwag',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/poliwag.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/poliwag.png',
+        location: [0.8748169838945827, 0.20226843100189035]
       },
       img: levelThree,
       name: "Cerulean City"
@@ -94,15 +100,18 @@ function App() {
     "four": {
       first: {
         name: 'Raichu',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/raichu.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/raichu.png',
+        location: [0.2042459736456808, 0.4909437559580553]
       },
       second: {
         name: 'Golduck',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/golduck.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/golduck.png',
+        location: [0.37774524158125916, 0.6129647283126788]
       },
       third: {
         name: 'Porygon',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/porygon.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/porygon.png',
+        location: [0.7554904831625183, 0.4775977121067683]
       },
       img: levelFour,
       name: "Celadon City Fair"
@@ -110,15 +119,18 @@ function App() {
     "five": {
       first: {
         name: 'Pidgey',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/pidgey.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/pidgey.png',
+        location: [0.17423133235724744, 0.6695075757575758]
       },
       second: {
         name: 'Mewtwo',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mewtwo.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/mewtwo.png',
+        location: [0.5087847730600292, 0.2509469696969697]
       },
       third: {
         name: 'Tauros',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tauros.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tauros.png',
+        location: [0.15373352855051245, 0.3096590909090909]
       },
       img: levelFive,
       name: "Safari Zone"
@@ -126,15 +138,18 @@ function App() {
     "six": {
       first: {
         name: 'Ekans',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/ekans.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/ekans.png',
+        location: [0.6178623718887262, 0.5574548907882241]
       },
       second: {
         name: 'Venusaur',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/venusaur.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/venusaur.png',
+        location: [0.3945827232796486, 0.3352326685660019]
       },
       third: {
         name: 'Slowbro',
-        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowbro.png'
+        sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowbro.png',
+        location: [0.8060029282576867, 0.6666666666666666]
       },
       img: levelSix,
       name: "Indigo Plateau"

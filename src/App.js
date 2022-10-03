@@ -42,12 +42,12 @@ function App() {
       second: {
         name: 'Slowpoke',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/slowpoke.png',
-        location: [0.8850658857979502, 0.6998087954110899]
+        location: [0.8850658857979502, 0.6978967495219885]
       },
       third: {
         name: 'Caterpie',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/caterpie.png',
-        location: [0.41947291361639827, 0.731357552581262]
+        location: [0.4172767203513909, 0.8718929254302104]
       },
       img: levelOne,
       name: "Viridian Forest"
@@ -139,7 +139,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress}/>}/>
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame}/>}/>
       </Routes>
     </BrowserRouter>
     </div>

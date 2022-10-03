@@ -3,7 +3,7 @@ function CharMenu(props) {
   const levelData = props.levelData
 
   return (
-    <div className="btn-group-vertical btn-group-lg p-3" role="group" hidden={props.showList ? false : true} style={{ position: "absolute", top: props.y, left: props.x }}>
+    <div className="btn-group-vertical btn-group-lg p-3" role="group" hidden={props.showList ? false : true} style={{ position: "absolute", left: props.menuX, top: props.menuY }}>
       <button type="button" className="btn btn-dark" onClick={props.size.bind(this, props.x, props.y, "first")}>
         {levelData.first.name}
       </button>

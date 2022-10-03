@@ -11,6 +11,7 @@ function Game(props) {
   const [coords, setCoords] = useState([0, 0]);
   const [showList, setShowList] = useState(false);
   const gameRef = useRef();
+  let [correct, setCorrect] = useState(false)
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -38,10 +39,21 @@ function Game(props) {
     const relativeY = (y - document.querySelector("nav").clientHeight) / height;
     console.log(relativeY)
 
-    if (Math.abs(relativeX - pokemon.location[0]) < 0.02 && Math.abs(relativeY - pokemon.location[1]) < 0.02) {
-      console.log(pokemon.name)
+    if (Math.abs(relativeX - levelData[pokemon].location[0]) < 0.03 && Math.abs(relativeY - levelData[pokemon].location[1]) < 0.03) {
+      console.log(levelData[pokemon].name)
+      console.log(props.progress)
+      console.log(levelData[pokemon])
+
+      props.setProgress({
+        ...props.progress,
+        [pokemon]: true,
+      });
+
+      console.log(props.progress)
     } else {
-      console.log(`not ${pokemon.name}`)
+      console.log(`not ${levelData[pokemon].name}`)
+      console.log(props.progress)
+
     }
   }
 

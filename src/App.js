@@ -15,6 +15,11 @@ function App() {
   const [level, setLevel] = useState("one");
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
+  const [progress, setProgress] = useState({
+    first: false,
+    second: false,
+    third: false
+  })
 
   function startGame() {
     setTime(0)
@@ -134,7 +139,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running}/>}/>
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress}/>}/>
       </Routes>
     </BrowserRouter>
     </div>

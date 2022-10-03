@@ -30,7 +30,7 @@ function Game(props) {
     setShowList(!showList);
   };
 
-  const size = (x, y) => {
+  const size = (x, y, pokemon) => {
     let width = gameRef.current.offsetWidth;
     const relativeX = x / width;
     console.log(relativeX)
@@ -38,10 +38,10 @@ function Game(props) {
     const relativeY = (y - document.querySelector("nav").clientHeight) / height;
     console.log(relativeY)
 
-    if (Math.abs(relativeX - levelData.first.location[0]) < 0.02 && Math.abs(relativeY - levelData.first.location[1]) < 0.02) {
-      console.log("weedle")
+    if (Math.abs(relativeX - pokemon.location[0]) < 0.02 && Math.abs(relativeY - pokemon.location[1]) < 0.02) {
+      console.log(pokemon.name)
     } else {
-      console.log("not weedle")
+      console.log(`not ${pokemon.name}`)
     }
   }
 

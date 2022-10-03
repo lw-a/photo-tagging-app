@@ -27,7 +27,7 @@ function Game(props) {
       setY(e.pageY);
     }
     setCoords([e.pageX, e.pageY]);
-    setShowList(true);
+    setShowList(!showList);
   };
 
   const size = (x, y) => {
@@ -41,7 +41,6 @@ function Game(props) {
     console.log(relativeY)
 
   }
-
 
   return(
     <div ref={gameRef}>

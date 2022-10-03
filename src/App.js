@@ -8,7 +8,13 @@ import levelThree from './images/levelThree.png'
 import levelFour from './images/levelFour.png'
 import levelFive from './images/levelFive.png'
 import levelSix from './images/levelSix.png'
-import './styles/App.css';
+import levelOneSmall from './images/levelOneSmall.png'
+import levelTwoSmall from './images/levelTwoSmall.png'
+import levelThreeSmall from './images/levelThreeSmall.png'
+import levelFourSmall from './images/levelFourSmall.png'
+import levelFiveSmall from './images/levelFiveSmall.png'
+import levelSixSmall from './images/levelSixSmall.png'
+import './styles/App.css'
 
 function App() {
   const [level, setLevel] = useState("one");
@@ -62,6 +68,7 @@ function App() {
         location: [0.4172767203513909, 0.8718929254302104]
       },
       img: levelOne,
+      smallImg: levelOneSmall,
       name: "Viridian Forest"
     },
     two: {
@@ -81,6 +88,7 @@ function App() {
         location: [0.10688140556368961, 0.5491881566380133]
       },
       img: levelTwo,
+      smallImg: levelTwoSmall,
       name: "Mt. Moon"
     },
     three: {
@@ -100,6 +108,7 @@ function App() {
         location: [0.8748169838945827, 0.20226843100189035]
       },
       img: levelThree,
+      smallImg: levelThreeSmall,
       name: "Cerulean City"
     },
     four: {
@@ -119,6 +128,7 @@ function App() {
         location: [0.7554904831625183, 0.4775977121067683]
       },
       img: levelFour,
+      smallImg: levelFourSmall,
       name: "Celadon City Fair"
     },
     five: {
@@ -138,6 +148,7 @@ function App() {
         location: [0.15373352855051245, 0.3096590909090909]
       },
       img: levelFive,
+      smallImg: levelFiveSmall,
       name: "Safari Zone"
     },
     six: {
@@ -157,6 +168,7 @@ function App() {
         location: [0.8060029282576867, 0.6666666666666666]
       },
       img: levelSix,
+      smallImg: levelSixSmall,
       name: "Indigo Plateau"
     }
   }

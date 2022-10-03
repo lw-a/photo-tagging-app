@@ -72,7 +72,7 @@ function Game(props) {
     <div ref={gameRef}>
     <Nav levelData={levelData} time={props.time} setTime={props.setTime} running={props.running} />
     <img src={levelData.img} alt="game" className="img-fluid w-100" onClick={handleClick}/>
-    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} levelData={levelData} size={size}/>
+    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} progress={props.progress} levelData={levelData} size={size}/>
     </div>
   )
 }

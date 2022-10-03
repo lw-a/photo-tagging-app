@@ -1,6 +1,5 @@
 import Home from "./Components/Home";
 import Game from "./Components/Game";
-import StartModal from "./Components/StartModal";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import levelOne from './images/levelOne.png'
@@ -30,17 +29,17 @@ function App() {
     setRunning(false)
     const score = time
     console.log(score)
-    setProgress({
-      first: false,
-      second: false,
-      third: false
-    });
+    // setProgress({
+    //   first: false,
+    //   second: false,
+    //   third: false
+    // });
     console.log(`Winner! Completed in ${("0" + Math.floor((score / 60000) % 60)).slice(-2)}:${("0" + Math.floor((score / 1000) % 60)).slice(-2)}`)
   }
 
 
   const levelData = {
-    "one": {
+    one: {
       first: {
         name: 'Weedle',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/weedle.png',
@@ -59,7 +58,7 @@ function App() {
       img: levelOne,
       name: "Viridian Forest"
     },
-    "two": {
+    two: {
       first: {
         name: 'Diglett',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/diglett.png',
@@ -78,7 +77,7 @@ function App() {
       img: levelTwo,
       name: "Mt. Moon"
     },
-    "three": {
+    three: {
       first: {
         name: 'Tentacool',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/tentacool.png',
@@ -97,7 +96,7 @@ function App() {
       img: levelThree,
       name: "Cerulean City"
     },
-    "four": {
+    four: {
       first: {
         name: 'Raichu',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/raichu.png',
@@ -116,7 +115,7 @@ function App() {
       img: levelFour,
       name: "Celadon City Fair"
     },
-    "five": {
+    five: {
       first: {
         name: 'Pidgey',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/pidgey.png',
@@ -135,7 +134,7 @@ function App() {
       img: levelFive,
       name: "Safari Zone"
     },
-    "six": {
+    six: {
       first: {
         name: 'Ekans',
         sprite: 'https://img.pokemondb.net/sprites/ruby-sapphire/normal/ekans.png',
@@ -161,7 +160,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame}/>}/>
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} /> } />
       </Routes>
     </BrowserRouter>
     </div>

@@ -4,9 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 
 function EndModal(props) {
   const levelData = props.levelData
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-  // onHide={handleClose}
+
   return (
       <Modal show={props.show}  centered >
         <Modal.Header className={"d-flex border-0 justify-content-center align-items-center p-2"}>

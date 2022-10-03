@@ -13,6 +13,7 @@ function Game(props) {
   const [menuY, setMenuY] = useState(0);
   const [showList, setShowList] = useState(false);
   const gameRef = useRef();
+  const navHeight = document.querySelector("nav").clientHeight
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -38,7 +39,7 @@ function Game(props) {
     const relativeX = x / width;
     console.log(relativeX)
     let height = gameRef.current.offsetHeight;
-    const relativeY = (y - document.querySelector("nav").clientHeight) / height;
+    const relativeY = (y - navHeight) / height;
     console.log(relativeY)
 
     const selectedX = Math.abs(relativeX - levelData[pokemon].location[0])
@@ -71,8 +72,8 @@ function Game(props) {
 
   return(
     <div ref={gameRef}>
-    <Nav levelData={levelData} time={props.time} setTime={props.setTime} running={props.running} />
-    <img src={levelData.img} alt="game" className="img-fluid w-100" onClick={handleClick} style={{marginTop: document.querySelector("nav").clientHeight}}/>
+    <Nav levelData={levelData} time={props.time} setTime={props.setTime} running={props.running} progress={props.progress} />
+    <img src={levelData.img} alt="game" className="img-fluid w-100" onClick={handleClick} style={{marginTop: navHeight}}/>
     <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} progress={props.progress} levelData={levelData} size={size} setShowList={setShowList}/>
     <EndModal levelData={levelData} time={props.time} show={props.show} />
     </div>

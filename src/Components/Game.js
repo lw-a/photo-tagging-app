@@ -60,9 +60,13 @@ function Game(props) {
     } else {
       console.log(`not ${levelData[pokemon].name}`)
       console.log(props.progress)
-
     }
   }
+
+  useEffect(() => {
+    const results = Object.values(props.progress);
+    if (results.every((result) => result)) props.endGame()
+  }, [props])
 
   return(
     <div ref={gameRef}>

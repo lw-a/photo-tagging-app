@@ -14,7 +14,7 @@ import './styles/App.css';
 function App() {
   const [level, setLevel] = useState("one");
   const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
+  const [running, setRunning] = useState(true);
   const [progress, setProgress] = useState({
     first: false,
     second: false,
@@ -28,7 +28,14 @@ function App() {
 
   function endGame () {
     setRunning(false)
-
+    const score = time
+    console.log(score)
+    setProgress({
+      first: false,
+      second: false,
+      third: false
+    });
+    console.log(`Winner! Completed in ${("0" + Math.floor((score / 60000) % 60)).slice(-2)}:${("0" + Math.floor((score / 1000) % 60)).slice(-2)}`)
   }
 
 

@@ -41,31 +41,18 @@ function Game(props) {
   const size = (x, y, pokemon) => {
     let width = gameRef.current.offsetWidth;
     const relativeX = x / width;
-    console.log(relativeX)
     let height = gameRef.current.offsetHeight;
     const relativeY = (y - navHeight) / height;
-    console.log(relativeY)
 
     const selectedX = Math.abs(relativeX - levelData[pokemon].location[0])
     const selectedY = Math.abs(relativeY - levelData[pokemon].location[1])
 
-    console.log(selectedX)
-    console.log(selectedY)
 
     if ( selectedX < 0.03 && selectedY < 0.03) {
-      console.log(levelData[pokemon].name)
-      console.log(props.progress)
-      console.log(levelData[pokemon])
-
       props.setProgress({
         ...props.progress,
         [pokemon]: true,
       });
-
-      console.log(props.progress)
-    } else {
-      console.log(`not ${levelData[pokemon].name}`)
-      console.log(props.progress)
     }
   }
 

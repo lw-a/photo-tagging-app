@@ -45,9 +45,6 @@ function App() {
     setRunning(false)
     setScore(time)
     setShow(true)
-    console.log(score)
-
-    console.log(`Winner! Completed in ${("0" + Math.floor((score / 60000) % 60)).slice(-2)}:${("0" + Math.floor((score / 1000) % 60)).slice(-2)}`)
   }
 
   const levelData = {

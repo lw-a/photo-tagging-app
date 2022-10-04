@@ -13,7 +13,11 @@ function Game(props) {
   const [menuY, setMenuY] = useState(0);
   const [showList, setShowList] = useState(false);
   const gameRef = useRef();
-  const navHeight = document.querySelector("nav").clientHeight
+  let navHeight = 80
+
+  if (document.querySelector("nav")) {
+    navHeight = document.querySelector("nav").clientHeight
+  }
 
   const handleClick = (e) => {
     e.preventDefault()

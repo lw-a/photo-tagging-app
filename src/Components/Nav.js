@@ -23,7 +23,7 @@ function Nav(props) {
   } else {
     return (
       <nav className='navbar bg-dark navbar-dark my-2 d-flex justify-content-center'>
-        <h2 className="navbar-brand">Find That Pokemon!</h2>
+        <h2 className="text-light">Find That Pokemon!</h2>
       </nav>
     )
   }

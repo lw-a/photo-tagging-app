@@ -23,6 +23,7 @@ function EndModal(props) {
         </Modal.Body>
         <Modal.Footer className={"d-flex border-0 justify-content-center p-2"}>
           <Link to="/"><button type="button" className="btn btn-secondary border-0" style={{backgroundColor: "#e4000f"}}>Home</button></Link>
+          <button type="button" className="btn btn-secondary border-0" style={{backgroundColor: "#e4000f"}} onClick={props.startGame}>Replay</button>
         </Modal.Footer>
       </Modal>
   );

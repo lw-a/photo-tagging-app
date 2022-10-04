@@ -11,7 +11,6 @@ function Game(props) {
   const [y, setY] = useState(0);
   const [menuX, setMenuX] = useState(0);
   const [menuY, setMenuY] = useState(0);
-  const [showList, setShowList] = useState(false);
   const gameRef = useRef();
   let navHeight = 80
 
@@ -35,7 +34,7 @@ function Game(props) {
       setMenuY(e.pageY)
     }
     setY(e.pageY)
-    setShowList(!showList)
+    props.setShowList(!props.showList)
   };
 
   const size = (x, y, pokemon) => {
@@ -65,8 +64,8 @@ function Game(props) {
     <div ref={gameRef}>
     <Nav levelData={levelData} time={props.time} setTime={props.setTime} running={props.running} progress={props.progress} />
     <img src={levelData.img} alt="game" className="img-fluid w-100" onClick={handleClick} style={{marginTop: navHeight}}/>
-    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={showList} progress={props.progress} levelData={levelData} size={size} setShowList={setShowList}/>
-    <EndModal levelData={levelData} time={props.time} show={props.show} />
+    <DropDown x={x} y={y} menuX={menuX} menuY={menuY} showList={props.showList} progress={props.progress} levelData={levelData} size={size} setShowList={props.setShowList}/>
+    <EndModal levelData={levelData} time={props.time} show={props.show} startGame={props.startGame}/>
     </div>
   )
 }

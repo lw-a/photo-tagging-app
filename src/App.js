@@ -27,11 +27,15 @@ function App() {
     second: false,
     third: false
   })
+  const [showList, setShowList] = useState(false);
+
 
   function startGame() {
-    setTime(0)
+
     setRunning(true)
     setShow(false)
+    setTime(0)
+    setShowList(false)
 
     setProgress({
       first: false,
@@ -175,7 +179,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show}/> } />
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show} startGame={startGame} setShowList={setShowList} showList={showList}/> } />
       </Routes>
     </BrowserRouter>
     </div>

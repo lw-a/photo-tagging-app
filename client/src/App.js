@@ -1,5 +1,6 @@
 import Home from "./Components/Home";
 import Game from "./Components/Game";
+import Leaderboard from "./Components/Leaderboard";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import levelOne from './images/levelOne.png'
@@ -180,6 +181,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
         <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show} startGame={startGame} setShowList={setShowList} showList={showList}/> } />
+        <Route path="/leaderboard" element={<Leaderboard /> } />
       </Routes>
     </BrowserRouter>
     </div>

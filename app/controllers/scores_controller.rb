@@ -1,4 +1,4 @@
-class ScoresController < ApplicationController
+class ScoresController < ApiController
   before_action :set_score, only: %i[ show update destroy ]
 
   # GET /scores
@@ -10,7 +10,7 @@ class ScoresController < ApplicationController
 
   # GET /scores/1
   def show
-    render json: @score.to_json
+    render json: @score
   end
 
   # POST /scores

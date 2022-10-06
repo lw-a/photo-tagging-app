@@ -36,3 +36,4 @@ Score.create!(
   level: 2,
   time: 50_000
 )
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

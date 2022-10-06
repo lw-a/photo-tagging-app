@@ -1,0 +1,16 @@
+p {
+  margin: 0px !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.play {
+  color: #e4000f !important;
+}
+
+.name {
+  text-decoration: none;
+  color: black;
+}

@@ -23,7 +23,8 @@ function Leaderboard() {
   })
 
   const handleFilter = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
+    console.log(e)
   }
 
   return (
@@ -32,33 +33,43 @@ function Leaderboard() {
       <div className="container">
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Viridan Forest</a>
+            <a className="nav-link active" aria-current="page" onClick={(handleFilter())}>Viridan Forest</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Mt. Moon</a>
+            <a className="nav-link" onClick={(handleFilter())}>Mt. Moon</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Cerulean City</a>
+            <a className="nav-link" onClick={(handleFilter())}>Cerulean City</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Celadon City Fair</a>
+            <a className="nav-link" onClick={(handleFilter())}>Celadon City Fair</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Safari Zone</a>
+            <a className="nav-link" onClick={(handleFilter())}>Safari Zone</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Indigo Plateau</a>
+            <a className="nav-link" onClick={(handleFilter())}>Indigo Plateau</a>
           </li>
         </ul>
         <div>
 
         </div>
         {/* {scores.map(score => <div key={score.id}>{score}</div>)} */}
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item list-group-item-dark"> Name - Time (seconds)</li>
-          {scoresArray.map(score => <li key={score[0]} className="list-group-item list-group-item-dark"> {score[1]} - <span>{("0" + Math.floor((score[2] / 60000) % 60)).slice(-2)}:</span> <span>{("0" + Math.floor((score[2] / 1000) % 60)).slice(-2)}</span></li>)}
 
-        </ul>
+
+
+        <table className="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Time (seconds)</th>
+    </tr>
+  </thead>
+  <tbody className="table-group-divider">
+    {scoresArray.map(score => <tr><td> {score[1]} </td><td><span>{("0" + Math.floor((score[2] / 60000) % 60)).slice(-2)}:</span> <span>{("0" + Math.floor((score[2] / 1000) % 60)).slice(-2)}</span></td></tr>)}
+  </tbody>
+</table>
+
       </div>
 
     </div>

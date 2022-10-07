@@ -9,31 +9,30 @@ Score.delete_all
 
 Score.create!(
   name: 'test',
-  level: 1,
+  level: 'Viridian Forest',
   time: 10_000
 )
 
 Score.create!(
   name: 'test2',
-  level: 1,
+  level: 'Viridian Forest',
   time: 20_000
 )
 
 Score.create!(
   name: 'test3',
-  level: 1,
+  level: 'Viridian Forest',
   time: 30_000
 )
 
 Score.create!(
   name: 'test4',
-  level: 2,
+  level: 'Mt. Moon',
   time: 40_000
 )
 
 Score.create!(
   name: 'test5',
-  level: 2,
+  level: 'Mt. Moon',
   time: 50_000
 )
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

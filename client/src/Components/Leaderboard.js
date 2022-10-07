@@ -12,7 +12,12 @@ function Leaderboard() {
       .catch(error => console.log(error));
   }, []);
 
-  console.log(scores)
+  const scoresArray = []
+  // console.log(scores)
+  scores.forEach((score) => {
+    scoresArray.push([score.id, score.name, score.time, score.level])
+  })
+
   return (
     <div>
       <Nav />
@@ -40,7 +45,11 @@ function Leaderboard() {
         <div>
 
         </div>
-      {scores.map(score => <div>{score}</div>)}
+        {/* {scores.map(score => <div key={score.id}>{score}</div>)} */}
+        <ul>
+          {scoresArray.map(score => <li key={score[0]} className="text-light"> {score[1]} - {score[2]} </li>)}
+
+        </ul>
       </div>
 
     </div>

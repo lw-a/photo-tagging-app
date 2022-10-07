@@ -12,11 +12,19 @@ function Leaderboard() {
       .catch(error => console.log(error));
   }, []);
 
-  const scoresArray = []
+  let scoresArray = []
   // console.log(scores)
   scores.forEach((score) => {
     scoresArray.push([score.id, score.name, score.time, score.level])
   })
+
+  scoresArray = scoresArray.sort(function(a, b) {
+    return a[2] - b[2]
+  })
+
+  const handleFilter = (e) => {
+    e.preventDefault()
+  }
 
   return (
     <div>
@@ -46,8 +54,9 @@ function Leaderboard() {
 
         </div>
         {/* {scores.map(score => <div key={score.id}>{score}</div>)} */}
-        <ul>
-          {scoresArray.map(score => <li key={score[0]} className="text-light"> {score[1]} - {score[2]} </li>)}
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item list-group-item-dark"> Name - Time (seconds)</li>
+          {scoresArray.map(score => <li key={score[0]} className="list-group-item list-group-item-dark"> {score[1]} - <span>{("0" + Math.floor((score[2] / 60000) % 60)).slice(-2)}:</span> <span>{("0" + Math.floor((score[2] / 1000) % 60)).slice(-2)}</span></li>)}
 
         </ul>
       </div>

@@ -46,6 +46,6 @@ class ScoresController < ApiController
 
     # Only allow a list of trusted parameters through.
     def score_params
-      params.require(:score).permit(:name, :time)
+      params.require(:score).permit(:name, :time, :level)
     end
 end

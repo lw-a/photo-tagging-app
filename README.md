@@ -1,24 +1,12 @@
-# README
+# Find That Pokemon!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A pokemon themed game inspired by Where's Waldo and built in React with Rails backend.
 
-Things you may want to cover:
+[Live Demo](https://photo-tagging-app.vercel.app/) 👈
 
-* Ruby version
+# To Do:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Add leaderboard
+- Provide more visual feedback to user
+- Better Styling
+- Clean up code (big time)

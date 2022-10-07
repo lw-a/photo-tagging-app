@@ -20,14 +20,26 @@ function Nav(props) {
         <Link to="/"><button type="button" className="btn btn-secondary">Home</button></Link>
       </nav>
     )
+  } else if ((window.location.href.indexOf("leaderboard") > -1)) {
+    return (
+      <nav className='navbar bg-dark navbar-dark my-2 d-flex justify-content-center'>
+      <div className="container">
+        <h2 className="text-light">Find That Pokemon!</h2>
+
+        <Link to="/"><button type="button" className="btn btn-secondary">Home</button></Link>
+      </div>
+      </nav>
+    )
   } else {
     return (
       <nav className='navbar bg-dark navbar-dark my-2 d-flex justify-content-center'>
+      <div className="container">
         <h2 className="text-light">Find That Pokemon!</h2>
-        <Link to="/"><button type="button" className="btn btn-secondary">Home</button></Link>
-      <Link to="/leaderboard"><button type="button" className="btn btn-secondary">Leaderboard</button></Link>
+    <Link to="/leaderboard"><button type="button" className="btn btn-secondary ms-auto">Leaderboard</button></Link>
+      </div>
       </nav>
     )
+
   }
 }
 

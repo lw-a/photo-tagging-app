@@ -56,8 +56,8 @@ function EndModal(props) {
       {("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}</h4>
       <form onSubmit={handleSubmit} style={{textAlign: "center"}}>
         <label htmlFor="nameInput" className="form-label">Enter your name to add this time to the ledaerboard!</label>
-        <input type="text" className="form-control" name="nameInput" id="nameInput" placeholder="Ash Ketchum" onChange={handleInputChange}></input>
-        <button disabled={!score.name} type="submit" className="btn btn-secondary border-0 m-2" style={{backgroundColor: "#e4000f"}} autoFocus>Submit and go to Scoreboard</button>
+        <input type="text" className="form-control" name="nameInput" id="nameInput" placeholder="Ash Ketchum" onChange={handleInputChange} autoFocus></input>
+        <button disabled={!score.name} type="submit" className="btn btn-secondary border-0 m-2" style={{backgroundColor: "#e4000f"}}>Submit and go to Scoreboard</button>
       </form>
       {isSubmitting && <h3>Submitting...</h3>}
         </Modal.Body>

@@ -18,8 +18,10 @@ class ScoresController < ApiController
     @score = Score.new(score_params)
 
     if @score.save
+      puts "success"
       render json: @score, status: :created, location: @score
     else
+      puts "fail"
       render json: @score.errors, status: :unprocessable_entity
     end
   end

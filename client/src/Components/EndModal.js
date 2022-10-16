@@ -4,22 +4,34 @@ import Modal from 'react-bootstrap/Modal';
 
 function EndModal(props) {
   const levelData = props.levelData
+  const [score, setScore] = useState({
+    name: 'Ash Ketchum',
+    level: levelData.name,
+    time: props.time,
+  })
 
-  // const handleSubmit = (e) => {
-  //   fetch('/api/scores', {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       item:
-  //     })
-  //   })
-  // }
+  const handleInputChange = (e) => {
 
-  const handleSubmit = (e) => {
+    setScore({ ...score, name: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted');
+    setScore({ ...score, time: parseInt(props.time) });
+
+    try {
+      const response = await window.fetch('/api/scores', {
+        method: 'POST',
+        body: JSON.stringify(score),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!response.ok) throw Error(response.statusText);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -39,8 +51,8 @@ function EndModal(props) {
       {("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}</h4>
       <form onSubmit={handleSubmit}>
         <label htmlFor="nameInput" className="form-label">Enter your name to add this time to the ledaerboard!</label>
-        <input type="text" className="form-control" id="nameInput"></input>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <input type="text" className="form-control" name="nameInput" id="nameInput" placeholder="Ash Ketchum" onChange={handleInputChange}></input>
+        <button type="submit" className="btn btn-primary">Submit and go to Scoreboard</button>
       </form>
         </Modal.Body>
         <Modal.Footer className={"d-flex border-0 justify-content-center p-2"}>

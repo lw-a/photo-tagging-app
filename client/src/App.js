@@ -180,7 +180,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home setLevel={setLevel} levelData={levelData} startGame={startGame} /> } />
-        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show} startGame={startGame} setShowList={setShowList} showList={showList}/> } />
+        <Route path="/game" element={<Game levelData={levelData[level]} time={time} setTime={setTime} running={running} progress={progress} setProgress={setProgress} endGame={endGame} show={show} startGame={startGame} setShowList={setShowList} showList={showList} score={score}/> } />
         <Route path="/leaderboard" element={<Leaderboard /> } />
       </Routes>
     </BrowserRouter>

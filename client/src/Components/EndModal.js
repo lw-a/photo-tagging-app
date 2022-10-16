@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 function EndModal(props) {
   const levelData = props.levelData
   const [score, setScore] = useState({
-    name: 'Ash Ketchum',
+    name: '',
     level: levelData.name,
     time: props.time,
   })
@@ -14,13 +14,12 @@ function EndModal(props) {
 
   const handleInputChange = (e) => {
 
-    setScore({ ...score, name: e.target.value });
+    setScore({ ...score, name: e.target.value, time: props.time  });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true)
-    setScore({ ...score, time: parseInt(props.time) });
 
     try {
       const response = await window.fetch('/api/scores', {
@@ -55,14 +54,14 @@ function EndModal(props) {
         <h3>Time Taken:</h3>
         <h4>{("0" + Math.floor((props.time / 60000) % 60)).slice(-2)}:
       {("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}</h4>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{textAlign: "center"}}>
         <label htmlFor="nameInput" className="form-label">Enter your name to add this time to the ledaerboard!</label>
         <input type="text" className="form-control" name="nameInput" id="nameInput" placeholder="Ash Ketchum" onChange={handleInputChange}></input>
-        <button type="submit" className="btn btn-primary">Submit and go to Scoreboard</button>
+        <button disabled={!score.name} type="submit" className="btn btn-secondary border-0 m-2" style={{backgroundColor: "#e4000f"}} autoFocus>Submit and go to Scoreboard</button>
       </form>
       {isSubmitting && <h3>Submitting...</h3>}
         </Modal.Body>
-        <Modal.Footer className={"d-flex border-0 justify-content-center p-2"}>
+        <Modal.Footer className={"d-flex border-0 justify-content-center p-1"}>
           <Link to="/"><button type="button" className="btn btn-secondary border-0" style={{backgroundColor: "#e4000f"}}>Home</button></Link>
           <button type="button" className="btn btn-secondary border-0" style={{backgroundColor: "#e4000f"}} onClick={props.startGame}>Replay</button>
         </Modal.Footer>

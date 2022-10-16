@@ -33,7 +33,7 @@ function Leaderboard() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {scoresArray.map(score => <tr><td> {score[1]} </td><td><span>{("0" + Math.floor((score[2] / 60000) % 60)).slice(-2)}:</span> <span>{("0" + Math.floor((score[2] / 1000) % 60)).slice(-2)}</span></td><td> {score[3]} </td></tr>)}
+            {scoresArray.map(score => <React.Fragment key={score[0]}><tr><td>{score[1]}</td><td><span>{("0" + Math.floor((score[2] / 60000) % 60)).slice(-2)}:</span><span>{("0" + Math.floor((score[2] / 1000) % 60)).slice(-2)}</span></td><td> {score[3]}</td></tr></React.Fragment>)}
           </tbody>
         </table>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 
 function EndModal(props) {
@@ -9,6 +9,8 @@ function EndModal(props) {
     level: levelData.name,
     time: props.time,
   })
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
 
@@ -17,6 +19,7 @@ function EndModal(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true)
     setScore({ ...score, time: parseInt(props.time) });
 
     try {
@@ -31,6 +34,9 @@ function EndModal(props) {
       if (!response.ok) throw Error(response.statusText);
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsSubmitting(false);
+      navigate("/leaderboard")
     }
   };
 
@@ -54,6 +60,7 @@ function EndModal(props) {
         <input type="text" className="form-control" name="nameInput" id="nameInput" placeholder="Ash Ketchum" onChange={handleInputChange}></input>
         <button type="submit" className="btn btn-primary">Submit and go to Scoreboard</button>
       </form>
+      {isSubmitting && <h3>Submitting...</h3>}
         </Modal.Body>
         <Modal.Footer className={"d-flex border-0 justify-content-center p-2"}>
           <Link to="/"><button type="button" className="btn btn-secondary border-0" style={{backgroundColor: "#e4000f"}}>Home</button></Link>

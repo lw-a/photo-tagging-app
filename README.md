@@ -1,12 +1,5 @@
 # Find That Pokemon!
 
-A pokemon themed game inspired by Where's Waldo and built in React with Rails backend.
+A pokemon themed game inspired by Where's Waldo and built in React with Rails backend to provide global leaderboard.
 
-[Live Demo](https://photo-tagging-app.vercel.app/) 👈
-
-# To Do:
-
-- Add leaderboard
-- Provide more visual feedback to user
-- Better Styling
-- Clean up code (big time)
+[Live Demo](https://find-that-pokemon.herokuapp.com/) 👈

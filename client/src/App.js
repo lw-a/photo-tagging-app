@@ -3,12 +3,12 @@ import Game from "./Components/Game";
 import Leaderboard from "./Components/Leaderboard";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import levelOne from './images/levelOne.png'
-import levelTwo from './images/levelTwo.png'
-import levelThree from './images/levelThree.png'
-import levelFour from './images/levelFour.png'
-import levelFive from './images/levelFive.png'
-import levelSix from './images/levelSix.png'
+import levelOne from './images/levelOneOptimised.webp'
+import levelTwo from './images/levelTwoOptimised.webp'
+import levelThree from './images/levelThreeOptimised.webp'
+import levelFour from './images/levelFourOptimised.webp'
+import levelFive from './images/levelFiveOptimised.webp'
+import levelSix from './images/levelSixOptimised.webp'
 import levelOneSmall from './images/levelOneSmall.png'
 import levelTwoSmall from './images/levelTwoSmall.png'
 import levelThreeSmall from './images/levelThreeSmall.png'
